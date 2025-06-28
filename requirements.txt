@@ -4,4 +4,3 @@ pyttsx3
 audioread
 pyautogui
 keyboard
-pygame
