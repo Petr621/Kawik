@@ -1,17 +1,24 @@
-import pyttsx3
-import audioread
 import time
-import pyautogui
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
 import os
 import sys
-from colorama import init, Fore
-from colorama import Back
-from colorama import Style
 import subprocess
-from alive_progress import alive_bar
-import keyboard
+
+try:
+    import pyttsx3
+    import audioread
+    import pyautogui
+    from colorama import Fore
+    from alive_progress import alive_bar
+    import keyboard
+    import requests
+except ModuleNotFoundError:
+    sys.exit("Run install_modules.bat")
+
+response = requests.get("https://api.github.com/repos/Petr621/Kawik/releases/latest")
+latest = response.json()['name']
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
 
 for voice in voices:
     if voice.name == 'IVONA 2 Maxim OEM - Russian male voice [22kHz]':
