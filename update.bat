@@ -8,7 +8,7 @@ if not %errorlevel%==0 (
     exit /b 1
 )
 
-git pull --rebase origin master
+git pull --rebase origin main
 if not %errorlevel%==0 (
     echo "Could not successfully pull the latest changes to your local repository"
     exit /b 1
