@@ -1,0 +1,6 @@
+colorama
+alive_progress
+pyttsx3
+audioread
+pyautogui
+keyboard
